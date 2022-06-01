@@ -198,11 +198,13 @@ nav {
 .social-icons {
   display: none;
 }
+/* HIDE THE LINKS BY DEFAULT */
 .links {
-  /* height: 0;
-  overflow: hidden;
-  transition: var(--transition); */
+  height: 0; /* causes the content of the block element to overflow (the links) */
+  overflow: hidden; /* makes the overflown content hidden */
+  transition: var(--transition); /* make the transition to hidden happen over time */
 }
+/* TOGGLE CLASS */
 .show-links {
   height: 10rem;
 }
@@ -222,7 +224,7 @@ nav {
     display: none;
   }
   .links {
-    height: auto;
+    height: auto; /* MAKE SURE TO ADD; if not, the links' height will be 10rem (the show-links class) */
     display: flex;
   }
   .links a {
